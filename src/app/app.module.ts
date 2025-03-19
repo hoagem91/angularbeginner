@@ -7,12 +7,16 @@ import { IntroComponent } from './intro/intro.component';
 import {CommonModule} from "@angular/common";
 import { DatabindingComponent } from './databinding/databinding.component';
 import {FormsModule} from "@angular/forms";
+import { NgifComponent } from './ngif/ngif.component';
+import {HelloComponent} from "./ngif/hello.component";
 
 @NgModule({
   declarations: [
     AppComponent,
     // IntroComponent,
-    DatabindingComponent
+    DatabindingComponent,
+    NgifComponent,
+    HelloComponent
   ],
   imports: [
     BrowserModule,
