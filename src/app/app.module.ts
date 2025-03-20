@@ -9,6 +9,7 @@ import { DatabindingComponent } from './databinding/databinding.component';
 import {FormsModule} from "@angular/forms";
 import { NgifComponent } from './ngif/ngif.component';
 import {HelloComponent} from "./ngif/hello.component";
+import { NgForComponent } from './ng-for/ng-for.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import {HelloComponent} from "./ngif/hello.component";
     // IntroComponent,
     DatabindingComponent,
     NgifComponent,
-    HelloComponent
+    HelloComponent,
+    NgForComponent
   ],
   imports: [
     BrowserModule,
