@@ -1,0 +1,9 @@
+<p>class-style works!</p>
+<button (click)="border = !border">Toggle Click</button>
+<br>
+<button (click)="change = !change">Toggle Change</button>
+<div class="box" [class.border]="border" [class.background]="change"></div>
+
+<!--style-->
+<p [style.color]="'red'" [style.font-size]="'20px'">let me work hard to success</p>
+<p [style]="{color:'red',fontSize:'20px',fontWeight:'bold'}">this is task day 6 in progress study angular</p>

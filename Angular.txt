@@ -5,6 +5,12 @@ day 3:data & eventbinding
 - string enpolation : {{ <obj> }}
 - data binding : [type] = "'text'" || "inputType"
 - event binding : (<event>) = "handler()"
-day4: ngIf 
+day4: ngIf directive 
 - *ngIf:tạo điều kiện
 - ng-template:tạo 1 template có thể thực thi dưới điều kiện nào đó
+day5: ngFor directive
+- *ngFor:tạo một vòng lặp - "let <prop> of <obj>"
+- variable của ngForOf:
++ $implicit T: giá trị của phần tử ở lần lặp hiện tại  
+day6:Class & Style Binding
+- class: bind - [class.ten-class] , [class] = "array , [class] = "object"

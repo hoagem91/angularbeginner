@@ -10,6 +10,7 @@ import {FormsModule} from "@angular/forms";
 import { NgifComponent } from './ngif/ngif.component';
 import {HelloComponent} from "./ngif/hello.component";
 import { NgForComponent } from './ngFor/ng-for.component';
+import { ClassStyleComponent } from './class-style/class-style.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { NgForComponent } from './ngFor/ng-for.component';
     DatabindingComponent,
     NgifComponent,
     HelloComponent,
-    NgForComponent
+    NgForComponent,
+    ClassStyleComponent
   ],
   imports: [
     BrowserModule,
