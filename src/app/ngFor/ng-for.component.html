@@ -1,0 +1,25 @@
+<p>ng-for works!</p>
+<!--<ul>-->
+<!--  <li *ngFor="let u of user;index as idx;count as total;first as isFirst;last as isLast;even as isEven;odd as isOdd" >-->
+<!--    <span>index : {{idx}}</span>-->
+<!--    <br>-->
+<!--    <span>total : {{total}}</span>-->
+<!--    <br>-->
+<!--    <span *ngIf="isFirst">index is first</span>-->
+<!--    <br>-->
+<!--    <span *ngIf="isLast">index is last</span>-->
+<!--    <br>-->
+<!--    <span *ngIf="isEven">index is even</span>-->
+<!--    <br>-->
+<!--    <span *ngIf="isOdd">index is odd</span>-->
+<!--    <br>-->
+<!--  </li>-->
+<!--</ul>-->
+<ng-container *ngIf="user.length >= 0;else under0">
+  <li *ngFor="let u of user; trackBy: trackByEmail" >
+    {{u.email}}
+  </li>
+</ng-container>
+<ng-template #under0>
+  User not found
+</ng-template>

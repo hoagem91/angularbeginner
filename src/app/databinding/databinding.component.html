@@ -1,0 +1,8 @@
+<p>{{ name }}</p>
+<p [title]="user.name"></p>
+<!--{{ expression }}}-->
+<input [type]="'text'" value="hoagem">
+<button (click)="handler($event)">ClickMe!</button>
+<br><br>
+<input type="text" [(ngModel)]="name" (ngModelChange)="name = $event" />
+

@@ -1,0 +1,10 @@
+Angular
+day 1+2:
+-- ng g c <new folder>
+day 3:data & eventbinding
+- string enpolation : {{ <obj> }}
+- data binding : [type] = "'text'" || "inputType"
+- event binding : (<event>) = "handler()"
+day4: ngIf 
+- *ngIf:tạo điều kiện
+- ng-template:tạo 1 template có thể thực thi dưới điều kiện nào đó
