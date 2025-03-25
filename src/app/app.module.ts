@@ -12,6 +12,8 @@ import {HelloComponent} from "./ngif/hello.component";
 import { NgForComponent } from './ngFor/ng-for.component';
 import { ClassStyleComponent } from './class-style/class-style.component';
 import {ProgressBarComponent} from "./inputbinding/progress-bar.component";
+import {AuthorsListComponent} from "./authors/authors-list.component";
+import {AuthorsDetailComponent} from "./authors/authors-detail/authors-detail.component";
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import {ProgressBarComponent} from "./inputbinding/progress-bar.component";
     HelloComponent,
     NgForComponent,
     ClassStyleComponent,
-    ProgressBarComponent
+    ProgressBarComponent,
+    AuthorsListComponent,
+    AuthorsDetailComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,47 @@
+export interface Author{
+  id:number;
+  firstName:string;
+  lastName:string;
+  email:string;
+  gender:string;
+  ipAddress:string;
+}
+export const authors= [
+  {
+    id:1,
+    firstName:"Hoang",
+    lastName:"Anh",
+    email:"hoang@gmail.com",
+    gender:"male",
+    ipAddress:"127.2.0.1",
+  },
+  {
+    id:2,
+    firstName:"Hoang",
+    lastName:"Vu",
+    email:"hoangvu@gmail.com",
+    gender:"male",
+    ipAddress:"127.21.0.1",
+  },{
+    id:3,
+    firstName:"Lan",
+    lastName:"Anh",
+    email:"lananh@gmail.com",
+    gender:"female",
+    ipAddress:"127.22.0.1",
+  },{
+    id:4,
+    firstName:"Hoang",
+    lastName:"Phi",
+    email:"hoangphi@gmail.com",
+    gender:"male",
+    ipAddress:"127.422.0.1",
+  },{
+    id:5,
+    firstName:"Kim",
+    lastName:"Tuyen",
+    email:"tuyen@gmail.com",
+    gender:"female",
+    ipAddress:"127.212.0.1",
+  }
+]

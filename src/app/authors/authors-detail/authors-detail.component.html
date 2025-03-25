@@ -1,0 +1,6 @@
+
+<div class="authors-detail">
+  {{author?.firstName}} {{author?.lastName}}
+  <button style="margin-left: 5px" (click)="select.emit(author)">Select</button>
+  <button style="margin-left: 5px" (click)="deleted.emit(author.id)">Delete</button>
+</div>
