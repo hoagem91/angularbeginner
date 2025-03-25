@@ -11,6 +11,7 @@ import { NgifComponent } from './ngif/ngif.component';
 import {HelloComponent} from "./ngif/hello.component";
 import { NgForComponent } from './ngFor/ng-for.component';
 import { ClassStyleComponent } from './class-style/class-style.component';
+import {ProgressBarComponent} from "./inputbinding/progress-bar.component";
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ClassStyleComponent } from './class-style/class-style.component';
     NgifComponent,
     HelloComponent,
     NgForComponent,
-    ClassStyleComponent
+    ClassStyleComponent,
+    ProgressBarComponent
   ],
   imports: [
     BrowserModule,
