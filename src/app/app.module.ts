@@ -14,6 +14,7 @@ import { ClassStyleComponent } from './class-style/class-style.component';
 import {ProgressBarComponent} from "./inputbinding/progress-bar.component";
 import {AuthorsListComponent} from "./authors/authors-list.component";
 import {AuthorsDetailComponent} from "./authors/authors-detail/authors-detail.component";
+import {ToggleComponent} from "./twowaybinding/toggle.component";
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import {AuthorsDetailComponent} from "./authors/authors-detail/authors-detail.co
     ClassStyleComponent,
     ProgressBarComponent,
     AuthorsListComponent,
-    AuthorsDetailComponent
+    AuthorsDetailComponent,
+    ToggleComponent
   ],
   imports: [
     BrowserModule,
