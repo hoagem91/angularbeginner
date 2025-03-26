@@ -18,9 +18,13 @@ export class AppComponent {
   @ViewChildren(ToggleComponent) toggleChildren!: QueryList<ToggleComponent>;
 
   lastView= true;
-
+  ngOnInit() {
+    this.toggleChildren.changes.subscribe(console.log)
+  }
   ngAfterViewInit() {
     console.log(this.toggleComponent?.checked);
     this.toggleChildren.changes.subscribe(console.log)
+    console.log(this.toggleComponent);
+    console.log(this.toggleChildren);
   }
 }
