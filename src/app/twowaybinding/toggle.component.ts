@@ -8,6 +8,8 @@ export class ToggleComponent implements OnInit {
 @Input() checked!: boolean;
 @Output() onChange = new EventEmitter<boolean>();
 
+  name = 'child';
+
   toggleChange(){
     this.checked = !this.checked;
     this.onChange.emit(this.checked);

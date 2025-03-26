@@ -13,4 +13,11 @@ day5: ngFor directive
 - variable của ngForOf:
 + $implicit T: giá trị của phần tử ở lần lặp hiện tại  
 day6:Class & Style Binding
-- class: bind - [class.ten-class] , [class] = "array , [class] = "object"
+- class: bind - [class.ten-class] , [class] = "array , [class] = "object"  
+- style: bind - [style.ten-style] = "<prop>" , style.temStyle.unit (style.fonstSize.em = 2) , [style] = "<object>"
+day7: inputbinding
+- @input():có thể binding từ ngoài vào
+- oninit:khi call class sẽ gọi hàm init và chỉ chạy một lần từ lần gọi
+- onchanges: chạy khi thay đổi input
+day8:outputbinding
+- @output() : parent có thể nhận được sự kiện từ thằng con = eventEmitter<obj>()
