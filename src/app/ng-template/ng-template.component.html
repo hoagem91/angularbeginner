@@ -1,0 +1,25 @@
+<p>ng-template works!</p>
+<ng-container [ngTemplateOutlet]="under18" >
+  <p>You are enough to old !</p>
+</ng-container>
+<ng-template #under18>
+  <p>You aren't enough to old !</p>
+</ng-template>
+
+<ng-template
+  #btnTmpl
+  let-label = 'label'
+  let-className = 'className'
+>
+  {{label}} - {{className}}
+</ng-template>
+
+<ng-container
+  [ngTemplateOutlet]="btnTmpl"
+  [ngTemplateOutletContext]="{label:'ClickHere!',className:'action'}"
+>
+</ng-container>
+<ng-container
+  [ngTemplateOutlet]="btnTmpl"
+  [ngTemplateOutletContext]="{label:'Delete',className:'remove'}">
+</ng-container>

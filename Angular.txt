@@ -52,4 +52,10 @@ day13: Content Projection
 - <ng-content> : chứa render body
 - select : document.queryselector - truy xuất tới những element,component cần thực hiện
 - ngProjectAs : giúp element select tới element khác - poperty thuộc ng-container
- 
+day14 : ngTemplate
+- ng-template : được call ở template ref (thằng gọi) || <ng-container> call ngTemplate = [<nameTmpl>]
+- [ngTemplateOutLet] = "<nameTmpl>"
+- [ngTemplateOutLetContext] = {"poperty"}
+- hai binding trên nằm trong ng-container và được call qua let- trong ng-template
+day15: dependency injection
+- hiểu là class A có thể phụ thuộc vào nhiều class khác nhưng lại có thuộc tính của class B

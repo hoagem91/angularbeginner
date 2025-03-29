@@ -1,12 +1,17 @@
 import {AfterViewInit, Component, ElementRef, OnInit, QueryList, ViewChild, ViewChildren} from '@angular/core';
 import {ToggleComponent} from "./twowaybinding/toggle.component";
+import {TestServiceService} from "./test-service.service";
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements  OnInit{
+  user = {
+    name:"hoang",
+    age:20
+  }
   title = 'AngularApp';
   currentProgress = 70;
   isChecked = true;
@@ -16,10 +21,20 @@ export class AppComponent {
   @ViewChild(ToggleComponent) toggleComponent!: ToggleComponent;
   @ViewChild('toggleButton') toggleBtn!: ElementRef<HTMLButtonElement>;
   @ViewChildren(ToggleComponent) toggleChildren!: QueryList<ToggleComponent>;
+  listNumber = []
+  constructor(private tesService: TestServiceService) {
+  }
 
   lastView= true;
   ngOnInit() {
-    this.toggleChildren.changes.subscribe(console.log)
+    this.tesService.getName();
+    // this.toggleChildren.changes.subscribe(console.log);
+    this.tesService.getData().subscribe({
+      next: (data: any) => {
+        this.listNumber = data;
+        console.log(this.listNumber);
+      },
+    })
   }
   ngAfterViewInit() {
     console.log(this.toggleComponent?.checked);
