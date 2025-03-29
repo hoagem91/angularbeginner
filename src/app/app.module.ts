@@ -15,6 +15,7 @@ import {ProgressBarComponent} from "./inputbinding/progress-bar.component";
 import {AuthorsListComponent} from "./authors/authors-list.component";
 import {AuthorsDetailComponent} from "./authors/authors-detail/authors-detail.component";
 import {ToggleComponent} from "./twowaybinding/toggle.component";
+import {NgContentComponent} from "./ng-content/ng-content.component";
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import {ToggleComponent} from "./twowaybinding/toggle.component";
     ProgressBarComponent,
     AuthorsListComponent,
     AuthorsDetailComponent,
-    ToggleComponent
+    ToggleComponent,
+    NgContentComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,8 +1,6 @@
-<button (click)="lastView = !lastView">toggle</button>
-<app-toggle [checked]="true" (onChange)="onChildEmit($event)"></app-toggle>
-<app-toggle [checked]="true" (onChange)="onChildEmit($event)"></app-toggle>
-<app-toggle [checked]="true" (onChange)="onChildEmit($event)"></app-toggle>
-<ng-container *ngIf="lastView">
-  <app-toggle [checked]="true" (onChange)="onChildEmit($event)"></app-toggle>
-</ng-container>
-<!--<app-toggle [(checked)]="isChecked"></app-toggle>-->
+<app-ng-content>
+  <h3 class="heading">header</h3>
+  <app-toggle [checked]="isChecked" (onChange)="onChildEmit($event)"></app-toggle>
+  <label ngProjectAs="app-label">content 1</label>
+  <span>content 2</span>
+</app-ng-content>
