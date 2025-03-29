@@ -21,3 +21,35 @@ day7: inputbinding
 - onchanges: chạy khi thay đổi input
 day8:outputbinding
 - @output() : parent có thể nhận được sự kiện từ thằng con = eventEmitter<obj>()
+day9:twowaybinding
+-[(<>)] : vừa binding vừa nhận hàm thực thi từ con
+day10:ViewChild & ViewChildrent
+- #<>: tham chiếu tới 1 component or 
+- @ViewChild('<string>'||component , {static:true, read:}) : tham chiếu tới 1 view childcomponent - static không chạy được khi component nằm trong structure directive
+- @ViewChildrent(component || '<string>') : dung khi co nhieu component cung tac vu nhung lai nam trong structure directive
+- ngDoCheck()
+day11:typescript
+- type: never = throw exception
+- 4 poperty oop:
+  + tính đóng gói : (chỉ có thuộc tính public thì mới truy cập được)
+  + tính kế thừa : kế thừa thuộc tính của lớp cha
+  + tính đa hình : con có thể ghi đè lại method của lớp cha
+  + tính trừu tượng hoá :chỉ hiển thị những phần quan trọng abstract	
+day12:typescript advance
+- type unknow : giống kiểu dữ liệu any nhưng yêu cầu chặt chẽ hơn về kiểm tra kiểu dữ liệu
+- & : intersection type kế thừa lại các method or poperty
+- union type : string | number - hoặc các type khác
+- Exclude<t,u> : loại bỏ những types được gắn cho U và lấy T
+- Extract<t,u> : lấy những types được được gắn cho U và loại T
+- readonly<T>: chỉ được đọc chứ không được set
+- Partial<T> : biến tất cả các thược tính T -> ?.(optional)
+- Nullable<T> : { () | null} biến tất cả các poperty có thể là null
+- Pick<t,k extends keyof T> : pick từ trong t những type có key là K
+- Record<k extends keyof any,T> : gán type key T cho từng key của k
+- returnType<t> : lấy kiểu dữ liệu của 1 fnc trả về
+- omit : ket hop guawx exclude va pick
+day13: Content Projection
+- <ng-content> : chứa render body
+- select : document.queryselector - truy xuất tới những element,component cần thực hiện
+- ngProjectAs : giúp element select tới element khác - poperty thuộc ng-container
+ 
