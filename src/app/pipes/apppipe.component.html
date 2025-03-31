@@ -1,0 +1,20 @@
+<!--<p>{{currentDate | date:"short"}}</p>-->
+<!--<p>{{currentDate | date:"medium"}}</p>-->
+<!--<p>{{currentDate | date:"shortDate"}}</p>-->
+<!--<p>{{currentDate | date:"mediumDate"}}</p>-->
+<!--<p>{{currentDate | date:"longDate"}}</p>-->
+<!--<p>{{currentDate | date:"fullDate"}}</p>-->
+<!--<p>{{user.name | uppercase}}</p>-->
+<!--<p>{{user.name | lowercase}}</p>-->
+<!--<p>{{125|currency}}</p>-->
+<!--<p>{{125|currency:"VND"}}</p>-->
+<div>
+  <code>promise|async</code>:
+  <button (click)="clicked()">{{ arrived ? 'Reset' : 'Resolve' }}</button>
+  <span>Wait for it... {{ greeting | async }}</span>
+</div>
+<div><code>observable|async</code>: Time: {{ time | async }}</div>
+
+<div>
+  {{address | formatAddress}}
+</div>

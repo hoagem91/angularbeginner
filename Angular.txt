@@ -59,3 +59,12 @@ day14 : ngTemplate
 - hai binding trên nằm trong ng-container và được call qua let- trong ng-template
 day15: dependency injection
 - hiểu là class A có thể phụ thuộc vào nhiều class khác nhưng lại có thuộc tính của class B
+day16: dependency injection angular
+- use provider : để inject component - provide:<nameComponentInject>
+day17: contentchild&contentchildren
+- contentchild : ex điển hình là lấy templateRef của component con 
+- contentchildren : ex là theo dõi sự thay đổi của thằng con qua việc lấy queryList
+- directive : target đến ngtemplate có kèm thêm attribute
+day18:pipe
+- use pipe : {{<> | namePipe}} dùng để nhận một input và return output nào đó
+- file đuôi .pipe
