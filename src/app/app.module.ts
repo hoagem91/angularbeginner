@@ -5,12 +5,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {CommonModule} from "@angular/common";
 import {FormsModule} from "@angular/forms";
-import {NgTemplateComponent} from "./ng-template/ng-template.component";
+import {TabPanelComponent} from "./tabs/tab-panel.component";
+import {TabGroupComponent} from "./tabs/tab-group.component";
+import {TabBsGroupComponents} from "./tabs/tab-bs-group.component";
 
 @NgModule({
   declarations: [
     AppComponent,
-    NgTemplateComponent
+    TabGroupComponent,
+    TabPanelComponent,
+    TabBsGroupComponents
   ],
   imports: [
     BrowserModule,
