@@ -8,13 +8,17 @@ import {FormsModule} from "@angular/forms";
 import {TabPanelComponent} from "./tabs/tab-panel.component";
 import {TabGroupComponent} from "./tabs/tab-group.component";
 import {TabBsGroupComponents} from "./tabs/tab-bs-group.component";
+import {CounterComponent} from "./tabs/tab-counter.component";
+import {TabPanelDirective} from "./tabs/tab.directive";
 
 @NgModule({
   declarations: [
     AppComponent,
     TabGroupComponent,
     TabPanelComponent,
-    TabBsGroupComponents
+    TabBsGroupComponents,
+    CounterComponent,
+    TabPanelDirective
   ],
   imports: [
     BrowserModule,

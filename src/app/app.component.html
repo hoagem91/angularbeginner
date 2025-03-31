@@ -11,8 +11,31 @@
 <!--  <app-tab-panel title="Tab 3">content tab 3</app-tab-panel>-->
 <!--  &lt;!&ndash; More tab panel &ndash;&gt;-->
 <!--</app-tab-group>-->
+
+<button (click)="showTab4 = !showTab4">Toggle Panel 4</button>
 <tab-bs-group>
-  <app-tab-panel title="Tab 1">content tab 1</app-tab-panel>
-  <app-tab-panel title="Tab 2">content tab 2</app-tab-panel>
-  <app-tab-panel title="Tab 3">content tab 3</app-tab-panel>
+  <app-tab-panel title="Tab 1">
+    <ng-template tabPanel>
+      content tab 1
+      <app-counter></app-counter>
+    </ng-template>
+  </app-tab-panel>
+  <app-tab-panel title="Tab 2">
+    <ng-template tabPanel>
+      content tab 2
+      <app-counter></app-counter>
+    </ng-template>
+  </app-tab-panel>
+  <app-tab-panel title="Tab 3">
+    <ng-template tabPanel>
+      content tab 3
+      <app-counter></app-counter>
+    </ng-template>
+  </app-tab-panel>
+  <app-tab-panel title="Tab 4" *ngIf="showTab4">
+    <ng-template tabPanel>
+      content tab 4
+      <app-counter></app-counter>
+    </ng-template>
+  </app-tab-panel>
 </tab-bs-group>

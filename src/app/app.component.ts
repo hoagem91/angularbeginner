@@ -46,6 +46,7 @@ export class AppComponent implements  OnInit{
   onchangeActive(index: number) {
     console.log(index);
   }
+  showTab4=true;
   ngOnInit() {
   }
 }
