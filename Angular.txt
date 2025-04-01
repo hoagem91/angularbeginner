@@ -67,10 +67,25 @@ day17: contentchild&contentchildren
 - directive : target đến ngtemplate có kèm thêm attribute
 day18:pipe
 - use pipe : {{<> | namePipe}} dùng để nhận một input và return output nào đó
-- file đuôi .pipe
+- file đuôi .pipe.ts
 day19: RxJS Concepts
 - observable : có thể hiểu như một dòng chảy - là 1 function 
+ex : const observable = new Observable(function subscribe(observe){
+  const id = setTimeOut(()=>{
+      observe.next()
+      observe.complete()
+  },1000)
+  return function unsubcribe(){
+    clearTimeout(id)
+  }
+  
+})
 - observer : là tập hợp callback có 3 agrs(next,error or complete) được gửi đến bởi observable
+ex : const subcription = observable.subcribe({
+  next:
+  error:
+  complete:
+})
 - use observable : chỉ cần subcribe vào nó là được
 day20:RxJS Creation Operator
 - of(<>).subcribe(observe):để tạo 1 observe từ bất kì type nào
@@ -100,6 +115,7 @@ now$.subscribe(observer);
 now$.subscribe(observer);
 // output: 0.9626312890837065
 now$.subscribe(observer);
+- timer
 - throw error("an error") : tạo observe và show error ngay lập tức
 day21:RxJS Transformation|Pipe Operator
 - .pipe(map()).subcribe(observe) : khác với type map không phải là 1 vòng lặp mà là khi chạy qua các phần tử mới thì tạo 1 observe mới
