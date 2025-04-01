@@ -12,6 +12,7 @@ import {CounterComponent} from "./tabs/tab-counter.component";
 import {TabPanelDirective} from "./tabs/tab.directive";
 import {PipeComponent} from "./pipes/apppipe.component";
 import {FormatAddressPipe} from "./pipes/format-address.pipe";
+import {AppRxJSComponent} from "./RxJS/rxjsconcepts.component";
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import {FormatAddressPipe} from "./pipes/format-address.pipe";
     CounterComponent,
     TabPanelDirective,
     PipeComponent,
-    FormatAddressPipe
+    FormatAddressPipe,
+    AppRxJSComponent
   ],
   imports: [
     BrowserModule,

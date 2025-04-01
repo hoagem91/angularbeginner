@@ -68,3 +68,45 @@ day17: contentchild&contentchildren
 day18:pipe
 - use pipe : {{<> | namePipe}} dùng để nhận một input và return output nào đó
 - file đuôi .pipe
+day19: RxJS Concepts
+- observable : có thể hiểu như một dòng chảy - là 1 function 
+- observer : là tập hợp callback có 3 agrs(next,error or complete) được gửi đến bởi observable
+- use observable : chỉ cần subcribe vào nó là được
+day20:RxJS Creation Operator
+- of(<>).subcribe(observe):để tạo 1 observe từ bất kì type nào
+- from(<>): để tọa 1 obsever từ 1 iterable(string<tách chuỗi>,array,map/set) or promise
+- formEvent(): dùng để chuyển đổi 1 event sang observe - không tự unsubcribe 
+- fromEventPattern(): tạo observe từ 1 event 
+khác fromEvent:
+// fromEvent() từ ví dụ trên
+// output: MouseEvent {...}
+fromEvent(btn, 'click').subscribe(observer);
+
+// fromEventPattern
+// output: MouseEvent {...}
+fromEventPattern(
+  (handler) => {
+    btn.addEventListener('click', handler);
+  },
+  (handler) => {
+    btn.removeEventListener('click', handler);
+  }
+).subscribe(observer); 
+- defer(): nhận một observeFactory -> observe mới
+const now$ = defer(() => of(Math.random()));
+// output: 0.27312186273281935
+now$.subscribe(observer);
+// output: 0.7180321390218474
+now$.subscribe(observer);
+// output: 0.9626312890837065
+now$.subscribe(observer);
+- throw error("an error") : tạo observe và show error ngay lập tức
+day21:RxJS Transformation|Pipe Operator
+- .pipe(map()).subcribe(observe) : khác với type map không phải là 1 vòng lặp mà là khi chạy qua các phần tử mới thì tạo 1 observe mới
+- .pipe(pluck()): lấy ra 1 phần tử để tạo 1 observe
+- mapTo() : định nghĩa một observe được trả về type gì
+- reduce(arr,curr=>{},init) : tạo ra 1 observe với giá trị trả về trong reduce
+- scan(arr,curr=>{},init) : tạo ra observe với từng giá trị trả về trong reduce
+- toArray() : tạo observe trả về type array
+- buffer() :Lưu trữ giá trị được emit ra và đợi đến khi closingNotifier emit thì emit những giá trị đó thành 1 array -- click time để hiện val theo từng giây
+- bufferTime() : tạo observe trả về theo y/c buffTime -- bufferTime(2000) -> [0,1] , [2,3]
