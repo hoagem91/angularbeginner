@@ -13,6 +13,7 @@ import {TabPanelDirective} from "./tabs/tab.directive";
 import {PipeComponent} from "./pipes/apppipe.component";
 import {FormatAddressPipe} from "./pipes/format-address.pipe";
 import {AppRxJSComponent} from "./RxJS/rxjsconcepts.component";
+import {AppObservable} from "./RxJS/filtering.component";
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import {AppRxJSComponent} from "./RxJS/rxjsconcepts.component";
     TabPanelDirective,
     PipeComponent,
     FormatAddressPipe,
-    AppRxJSComponent
+    AppRxJSComponent,
+    AppObservable
   ],
   imports: [
     BrowserModule,

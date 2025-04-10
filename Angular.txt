@@ -105,8 +105,17 @@ day21:RxJS Transformation|Pipe Operator
 - .pipe(map()).subcribe(observe) : khác với type map không phải là 1 vòng lặp mà là khi chạy qua các phần tử mới thì tạo 1 observe mới
 - .pipe(pluck()): lấy ra 1 phần tử để tạo 1 observe
 - mapTo() : định nghĩa một observe được trả về type gì
-- reduce(arr,curr=>{},init) : tạo ra 1 observe với giá trị trả về trong reduce
+- reduce(arr,curr=>{},init) : tạo ra 1 observe với giá trị trả về trong reduce khi ct complete thì nó mới emit 
 - scan(arr,curr=>{},init) : tạo ra observe với từng giá trị trả về trong reduce
 - toArray() : tạo observe trả về type array
 - buffer() :Lưu trữ giá trị được emit ra và đợi đến khi closingNotifier emit thì emit những giá trị đó thành 1 array -- click time để hiện val theo từng giây
 - bufferTime() : tạo observe trả về theo y/c buffTime -- bufferTime(2000) -> [0,1] , [2,3]
+day22:RxJS Filtering
+- pipe.(filter(<fcn>)) : emit 1 observable giá trị trả về đúng với đk 
+- first(<>) : emit giá trị observable đầu tiên thoả mãn
+- last(<>) :emit giá trị observable cuối cùng thao mãn
+- find(<fcn>) : emit giá trị observable đầu tiên thoả mãn
+- single(<>) : emit 1 giá trị observable và báo lỗi nêu như có 2 gt tm trả về undefind khi không tim thây
+- take() : nhận vào tham số count để dùng đặt dk được emit sau đó complete , != first() không báo lỗi khi không tm
+- takeLast() : lấy n giá trị cuối cùng sau dk 
+- takeUntil() : ví dụ trong việc unsubcribe một 
