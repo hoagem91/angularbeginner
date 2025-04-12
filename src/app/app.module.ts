@@ -14,6 +14,7 @@ import {PipeComponent} from "./pipes/apppipe.component";
 import {FormatAddressPipe} from "./pipes/format-address.pipe";
 import {AppRxJSComponent} from "./RxJS/rxjsconcepts.component";
 import {AppObservable} from "./RxJS/filtering.component";
+import {CombinationComponent} from "./RxJS/combination.component";
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import {AppObservable} from "./RxJS/filtering.component";
     PipeComponent,
     FormatAddressPipe,
     AppRxJSComponent,
-    AppObservable
+    AppObservable,
+    CombinationComponent
   ],
   imports: [
     BrowserModule,
