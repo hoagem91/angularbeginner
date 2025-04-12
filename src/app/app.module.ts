@@ -15,6 +15,7 @@ import {FormatAddressPipe} from "./pipes/format-address.pipe";
 import {AppRxJSComponent} from "./RxJS/rxjsconcepts.component";
 import {AppObservable} from "./RxJS/filtering.component";
 import {CombinationComponent} from "./RxJS/combination.component";
+import {ErrorHandingComponent} from "./RxJS/errorhanding.component";
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import {CombinationComponent} from "./RxJS/combination.component";
     FormatAddressPipe,
     AppRxJSComponent,
     AppObservable,
-    CombinationComponent
+    CombinationComponent,
+    ErrorHandingComponent
   ],
   imports: [
     BrowserModule,

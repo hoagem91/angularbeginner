@@ -101,7 +101,7 @@ now$.subscribe(observer);
 // output: 0.9626312890837065
 now$.subscribe(observer);
 - throw error("an error") : tạo observe và show error ngay lập tức
-day21:RxJS Transformation|Pipe Operator
+day21:RxJS Transformation | Pipe Operator
 - .pipe(map()).subcribe(observe) : khác với type map không phải là 1 vòng lặp mà là khi chạy qua các phần tử mới thì tạo 1 observe mới
 - .pipe(pluck()): lấy ra 1 phần tử để tạo 1 observe
 - mapTo() : định nghĩa một observe được trả về type gì
@@ -118,4 +118,56 @@ day22:RxJS Filtering
 - single(<>) : emit 1 giá trị observable và báo lỗi nêu như có 2 gt tm trả về undefind khi không tim thây
 - take() : nhận vào tham số count để dùng đặt dk được emit sau đó complete , != first() không báo lỗi khi không tm
 - takeLast() : lấy n giá trị cuối cùng sau dk 
-- takeUntil() : ví dụ trong việc unsubcribe một 
+- takeUntil() : ví dụ trong việc unsubcribe một fromEvent
+- takeWhile(<dk>) : lấy n giá trị thoả mãn điều kiện
+- skip(n) : bỏ qua n phần tử
+- skipUntil(<event>) : 1 notifier báo hiệu điểm skip trả về giá trị sau skip
+- skipWhile(<dk>) :1 notifier báo hiệu điểm skip trả về giá trị thỏa mãn và sau skip
+- distinct() : so sánh giá trị được emit từ observable và emit những giá trị chưa được emit qua
+- distinctUntilChanged() : so sánh giá trị được emit từ observable và bỏ qua những giá trị trùng lặp cạnh nhau  
+- auditTime(<time>) : emit giá trị thỏa mãn trong time
+- throttleTime(<time>) : runtime khi emit nhận giá trị mới  
+			0s -> 0 runtime 1500 
+			1s -> 1 runtime 500
+			(1.5s) -> 1 runtime over
+			2s -> 2 runtime 1500
+			3s -> 3 runtime 500
+			3.5s -> 3 runtime over
+			..vv
+- debounceTime(<time>) : runtime không cần phải emit giá trị mới
+day23:Combination Operator
+- forkJoin():emit tất cả các giá trị đã được complete 
+- combineLastest(): emit giá trị có khoảng thời gian dài nhất đầu tiên sau đó chạy như bth - trong 1s có thể emit 3 giá trị
+- zip() : emit các index giá trị giá trị tương ứng của 2-3 object thành một array
+- concat() : emit từ hai obj thành 1
+- merge() : emit các giá trị cho đến khi complete thì dừng
+- race() : emit giá trị nào complete nhanh hơn
+- withLastestFrom()<1pipe>:trong ví dụ click nó sẽ emit giá trị click theo thời gian 
+- startWith() <1pipe> : ép phải bắt đầu bằng giá trị trong startWith
+- endWith() <1pipe>: ngược lại với start
+- pairwise() :
+day24:RxJS ErrorHanding
+- catchError(): emit một handle để bắt lỗi
+- retry():không báo error mà thay vào đó sẽ retry lại số lần offer
+- defaultValue() : emit một giá trị lỗi
+- throwIfEmpty(fcn) : emit một hàm trả về giá trị để bắt lỗi
+- every(fcn) : emit một hàm trả về giá trị boolean
+- iif(fcn->boolean,trueObs,falseObs) === toán tử ba ngôi : emit giá trị trả về theo trueObs<fcn> or falseObs<fcn> và khi khời tạo sẽ check qua cả trueObs và falseObs
+day25 : Higher order observable
+- higher order observable : Observe<observe>
+- mergeAll() , concatAll() , switchAll() : giúp hai obs lồng nhau thành 1 
+-- mergeAll(3) : ví dụ chạy 3 lần click liên tục 
+-- concatAll(3) : sub obs1 complete -> obs2 -> obs3 
+-- switchAll() : sub obs mới bỏ qua cái obs cũ
+- mergeMap() | mergeAll + map 
+- concatMap() | concatAll + map
+- switchMap() | switchAll + map
+- exhaustMap() : cancel các obs sau obs được chạy
+- merge|concat|switchMapTo() :  
+- tap() : tạo giá trị mới mà không ảnh hưởng đến data base
+- finalize()
+- repeat() : lặp lại
+- timeInterval() : see khoảng cách time 
+- timeout()
+- timeoutWith()
+- toPromise() :
