@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {CommonModule} from "@angular/common";
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {TabPanelComponent} from "./tabs/tab-panel.component";
 import {TabGroupComponent} from "./tabs/tab-group.component";
 import {TabBsGroupComponents} from "./tabs/tab-bs-group.component";
@@ -16,6 +16,9 @@ import {AppRxJSComponent} from "./RxJS/rxjsconcepts.component";
 import {AppObservable} from "./RxJS/filtering.component";
 import {CombinationComponent} from "./RxJS/combination.component";
 import {ErrorHandingComponent} from "./RxJS/errorhanding.component";
+import {HigherOderObs} from "./RxJS/litteObs.component";
+import {RunnerComponent} from "./RxJS/runner.component";
+import {SubjectComponent} from "./RxJS/subject.component";
 
 @NgModule({
   declarations: [
@@ -30,13 +33,17 @@ import {ErrorHandingComponent} from "./RxJS/errorhanding.component";
     AppRxJSComponent,
     AppObservable,
     CombinationComponent,
-    ErrorHandingComponent
+    ErrorHandingComponent,
+    HigherOderObs,
+    RunnerComponent,
+    SubjectComponent
   ],
   imports: [
     BrowserModule,
     CommonModule,
     AppRoutingModule,
     FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -161,7 +161,7 @@ day25 : Higher order observable
 -- switchAll() : sub obs mới bỏ qua cái obs cũ
 - mergeMap() | mergeAll + map 
 - concatMap() | concatAll + map
-- switchMap() | switchAll + map
+- switchMap() | switchAll + map 
 - exhaustMap() : cancel các obs sau obs được chạy
 - merge|concat|switchMapTo() :  
 - tap() : tạo giá trị mới mà không ảnh hưởng đến data base
@@ -171,3 +171,15 @@ day25 : Higher order observable
 - timeout()
 - timeoutWith()
 - toPromise() :
+day26: RxJS Subject And Multicast
+- subject : giống như một observable(phát giá trị) và là một observe(nhận giá trị) subcribe nhiều lần nhưng không lấy được giá trị cuối cùng của obs trước
+- behaviorSubject : ngược lại với subject lấy được giá trị cuối nhờ cách khởi tạo hoặc next(new value) - đồng bộ dữ liệu
+- replaySubject() : replay lại các obs cũ -- arg1:số giá trị nhận lại -- arg2: window time
+- asyncSubject : nhận giá trị cuối cùng khi subject
+- share
+day27/28:Router P1
+- router-outlet : khi muốn điều hướng trang phải có thẻ này
+- router : lấy route để điều hướng
+- navigate('/name',.slug) : điều hướng đến routeLink
+- [routerLink] : điều hướng đến link dẫn 
+- note : trong ví dụ điều hướng đến trang con từ home cần phải observable cho obj or interface để lấy ra dữ liệu
