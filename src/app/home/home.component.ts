@@ -31,8 +31,10 @@ export class HomeComponent implements OnInit {
     constructor(private readonly articleService: ArticleService,private router: Router) {}
     ngOnInit() {
         this.article$ = this.articleService.article$;
+        console.log(this.article$);
     }
     onReadMore(slug:string) {
         this.router.navigate(['/detail',slug]);
     }
+
 }
