@@ -183,3 +183,27 @@ day27/28:Router P1
 - navigate('/name',.slug) : điều hướng đến routeLink
 - [routerLink] : điều hướng đến link dẫn 
 - note : trong ví dụ điều hướng đến trang con từ home cần phải observable cho obj or interface để lấy ra dữ liệu
+day28/29: Lazy bundle
+- loadChildren(): import đến diều hướng của 1 model nào đó
+day30:Router Guard
+- ngăn chặn hoặc chỉ cho phép diều hướng
+- canActive : guard ngăn chặn hoặc cho phép ở thằng component
+- canActiveChild : guard ngăn chặn hoặc cho phép ở tất cả các component con
+day31:canDeactivate
+- giúp thông báo hành động chuyển hướng nhưng có thay đổi chưa được lưu
+- checkDeactivate : guard canDeactivate chỉ cần gọi ra để sử dụng 
+day32:canLoad
+- thời gian để quá trình lấy dữ liệu từ ba hoàn tất thì mới điều hướng
+- canLoad : guard chỉ cần đặt trong route của component là work
+day33:Tempate-driven Form
+- ngForm: định nghĩa cho 1 template form 
+- ngSubmit: call function thực hiện chức năng submit
+- ngModel: giúp xác định những control tại một thẻ nào đó 
+- [ngModel] , [(ngModel)]: binding và two-binding dữ liệu 
+day34: Validate Form
+- valid,invalid: check value
+- required: type form
+- mat-error: use ['required'] and *ngIf tạo validate
+- template driven
+day35: Reactive Form
+

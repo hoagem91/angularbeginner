@@ -7,7 +7,7 @@ import {TestServiceService} from "./test-service.service";
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements  OnInit{
+export class AppComponent{
   // user = {
   //   name:"hoang",
   //   age:20
@@ -42,11 +42,11 @@ export class AppComponent implements  OnInit{
   //   console.log(this.toggleComponent);
   //   console.log(this.toggleChildren);
   // }
-  currenIndex = 0;
-  onchangeActive(index: number) {
-    console.log(index);
-  }
-  showTab4=true;
-  ngOnInit() {
-  }
+  // currenIndex = 0;
+  // onchangeActive(index: number) {
+  //   console.log(index);
+  // }
+  // showTab4=true;
+  // ngOnInit() {
+  // }
 }

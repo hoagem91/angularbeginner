@@ -1,9 +1,12 @@
 import {Component} from "@angular/core";
 import {Observable, Observer} from "rxjs";
+import {FormatAddressPipe} from "./format-address.pipe";
 
 @Component({
   selector: "app-pipe",
-  templateUrl: "./apppipe.component.html",
+  templateUrl: "./app-pipe.component.html",
+  standalone: true,
+  imports: [FormatAddressPipe],
 })
 export class PipeComponent {
   address=
